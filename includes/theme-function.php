@@ -2,9 +2,11 @@
 
 (defined('ABSPATH')) || exit;
 
-function image_url($path)
+function image_url($path, $alt = null, $class = null)
 {
-    return HEYAT_IMAGE . $path . '?ver=' . HEYAT_VERSION;
+    if ($alt) {$alt = 'alt="' . $alt . '"';}
+    if ($class) {$class = 'class="' . $class . '"';}
+    return '<img ' . $class . ' src="' . HEYAT_IMAGE . $path . '?ver=' . HEYAT_VERSION . '" ' . $alt . '>';
 }
 
 function get_view_part($path)
@@ -90,7 +92,6 @@ function heyat_cookie(): string
 
     return $is_key_cookie;
 }
-
 
 function link_to_code($input)
 {
