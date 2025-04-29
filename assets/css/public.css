@@ -1,0 +1,399 @@
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/IranSansX/IRANSansXFaNum-Regular.woff') format('woff'),
+    url('../fonts/IranSansX/IRANSansXFaNum-Regular.woff2') format('woff2'),
+    url("../fonts/IranSansX/IRANSansXFaNum-Regular.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/IranSansX/IRANSansXFaNum-Medium.woff') format('woff'),
+    url('../fonts/IranSansX/IRANSansXFaNum-Medium.woff2') format('woff2'),
+    url("../fonts/IranSansX/IRANSansXFaNum-Medium.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/IranSansX/IRANSansXFaNum-Bold.woff') format('woff'),
+    url('../fonts/IranSansX/IRANSansXFaNum-Bold.woff2') format('woff2'),
+    url("../fonts/IranSansX/IRANSansXFaNum-Bold.ttf") format("truetype")
+}
+
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 900;
+  src: url('../fonts/IranSansX/IRANSansXFaNum-Heavy.woff') format('woff'),
+    url('../fonts/IranSansX/IRANSansXFaNum-Heavy.woff2') format('woff2'),
+    url("../fonts/IranSansX/IRANSansXFaNum-Heavy.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/IranSansX/IRANSansXFaNum-Regular.woff') format('woff'),
+    url('../fonts/IranSansX/IRANSansXFaNum-Regular.woff2') format('woff2'),
+    url("../fonts/IranSansX/IRANSansXFaNum-Regular.ttf") format("truetype")
+}
+
+:root {
+
+  --bs-font-sans-serif: 'IRANSans';
+
+
+
+  /* swiper */
+}
+
+
+:root [camp-theme="index"] {
+  --camp-primary: #D3B572;
+  --camp-primary-hover: #dc9e18;
+  --camp-text-hover: orangered;
+  --camp-btn-text: black;
+  --camp-btn-primary: #D3B572;
+}
+
+* {
+  font-family: 'IRANSans';
+}
+
+body {
+  direction: rtl;
+  background-color: #f3f3f3;
+  color: #000;
+  position: relative;
+  font-size: 13px;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+
+
+/* input */
+/* input::placeholder {
+  color: var(--secondary-tint-5) !important;
+}
+
+input::-webkit-input-placeholder {
+  color: var(--secondary-tint-5) !important;
+}
+
+input::-moz-placeholder {
+  color: var(--secondary-tint-5) !important;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  color: var(--secondary-tint-5) !important;
+}
+
+input:-moz-placeholder {
+  color: var(--secondary-tint-5) !important;
+  opacity: 1;
+} */
+
+
+
+
+/* font-size */
+
+h4,
+.h4 {
+  font-size: 1.25rem;
+}
+
+
+
+
+/* margin */
+
+.mt-10 {
+  margin-top: 2.5rem !important
+}
+
+/* custom */
+
+
+
+
+/* theme */
+
+.index-header {
+  background-image: url('../image/aWARey.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  background-color: #2f2d2d;
+}
+
+
+.index-header .header-moto {
+  width: max-content;
+  margin-inline: auto;
+  color: #fff
+}
+
+.index-header .main-logo {
+  width: max-content !important;
+  max-width: max-content
+}
+
+.index-header .nav-right {
+  position: relative
+}
+
+.index-header .nav-right .nav-item {
+  float: left;
+  margin-block: 0px
+}
+
+.index-header .nav-left {
+  position: relative
+}
+
+.index-header .nav-left .nav-item {
+  float: right;
+  margin-block: 0px
+}
+
+.index-header .nav-item:hover {
+  background-color: #dc9e18 !important
+}
+
+.index-header .nav-item {
+  padding-inline: 5px;
+  padding-top: 5px;
+  width: max-content;
+  aspect-ratio: 1/1;
+  margin-inline: 5px;
+  background-color: #d3b572
+}
+
+.index-header .nav-icon-cont {
+  margin-top: 50px
+}
+
+.index-header .nav-text-cont a {
+  color: #fff
+}
+
+.index-header .nav-text-cont a.animText {
+  animation: colorChangecircle 4s infinite
+}
+
+.index-header .nav-text-cont span {
+  padding-inline: 10px;
+  border-left: 1px solid white
+}
+
+.index-header .nav-text-cont :last-child {
+  border: none
+}
+
+@keyframes colorChangecircle {
+  0% {
+    color: #fff
+  }
+
+  50% {
+    color: red
+  }
+
+  to {
+    color: #fff
+  }
+}
+
+.logo-position {
+  margin-left: 4%
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-footer {
+  z-index: 99;
+  background-color: #494949
+}
+
+.main-footer .nav-icon-cont {
+  height: 70px
+}
+
+.main-footer .nav-icon-cont .nav-item {
+  margin-block: auto
+}
+
+.main-footer .footer-title h4 {
+  width: max-content;
+  margin-inline: auto
+}
+
+.main-footer .search-container input {
+  background-color: #2f2f2f;
+  color: #fff;
+  border: none;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  padding-inline: 15px
+}
+
+.main-footer .nav-right {
+  position: relative
+}
+
+.main-footer .nav-right .nav-item {
+  float: left;
+  margin-block: 50px
+}
+
+.main-footer .nav-left {
+  position: relative
+}
+
+.main-footer .nav-left .nav-item {
+  float: right;
+  margin-block: 50px
+}
+
+.main-footer .nav-item {
+  padding-inline: 5px;
+  padding-top: 5px;
+  width: max-content;
+  aspect-ratio: 1/1;
+  margin-inline: 5px;
+  background-color: var(--camp-btn-primary);
+  transition: .2s
+}
+
+.main-footer .nav-item svg * {
+  fill: var(--camp-btn-text)
+}
+
+.main-footer .nav-item:hover {
+  background-color: var(--camp-primary-hover)
+}
+
+.main-footer .nav-text-cont {
+  position: relative;
+  margin-top: 30px
+}
+
+.main-footer .nav-text-cont a {
+  color: #fff
+}
+
+.main-footer .nav-text-cont a:hover {
+  color: var(--camp-text-hover)
+}
+
+.main-footer .nav-text-cont span {
+  padding-inline: 10px;
+  border-left: 1px solid white
+}
+
+.main-footer .nav-text-cont :last-child {
+  border: none
+}
+
+.main-footer .margin-for-player {
+  margin-bottom: 110px !important
+}
+
+.seals a {
+  width: 150px
+}
+
+.seals a img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--primary-color);
+  border-top: 5px solid var(--secondary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
