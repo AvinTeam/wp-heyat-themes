@@ -10,7 +10,7 @@
 
 <body class="mat-typography" direction="rtl" dir="rtl" style="direction: rtl">
     <div class="container-fluid index-header mx-0 px-0 overflow-hidden">
-        <h4 class="header-moto mt-10">این پادگان هنوزش سرباز می پذیرد</h4>
+        <h5 class="header-moto mt-10">این پادگان هنوزش سرباز می پذیرد</h5>
         <div class="row">
             <div class="nav-right col-6 col-md-4 order-2 order-md-1">
                 <div class="nav-icon-cont me-md-1 row justify-content-end">

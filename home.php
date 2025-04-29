@@ -6,6 +6,61 @@
 
 
 
+<div class="index-container">
+    <div class="container-xl">
+        <div class="row justify-content-center">
+            <?php get_component('home/slider'); ?>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
 
 
 
@@ -14,3 +69,7 @@
     get_footer();
 
 ?>
+
+<script>
+
+</script>

@@ -52,14 +52,12 @@
             <div class="search-container col-8 col-md-4 mx-auto mt-5"><input type="text" placeholder="جستجو..."
                     class="rounded-pill"></div>
             <div class="footer-title mt-4">
-                <h4 class="text-white">هیئت ثارالله زنجان</h4>
+                <h5 class="text-white">هیئت ثارالله زنجان</h5>
             </div>
             <div class="row justify-content-center">
                 <div class="col-auto">
                     <div class="seals my-4"><a referrerpolicy="origin" target="_blank"
-                            href="https://trustseal.enamad.ir/?id=493881&amp;Code=2cNzwoSwVSGIflmpMpaftHf1G2KAdzgK"><img
-                                referrerpolicy="origin" src="<?php echo image_url('enamad.png') ?>" alt=""
-                                code="2cNzwoSwVSGIflmpMpaftHf1G2KAdzgK" style="cursor: pointer;"></a></div>
+                            href="https://trustseal.enamad.ir/?id=493881&amp;Code=2cNzwoSwVSGIflmpMpaftHf1G2KAdzgK"><?php echo image_url('enamad.png') ?></a></div>
                 </div>
             </div>
         </div>

@@ -39,39 +39,60 @@ function endLoading() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-
-
-
-
-    new Swiper('.swiper-container', {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        breakpoints: {
-            0: {
-                slidesPerView: 2.7,
-                spaceBetween: 15
-            },
-            960: {
-                slidesPerView: 4,
-                spaceBetween: 15
-            }
-        }
+    new Swiper('.swiper-home-slider-container', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
     });
++
+new Swiper('.swiper-home-slider2-container', {
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+});
 
-    new Swiper('.swiper-media', {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        breakpoints: {
-            0: {
-                slidesPerView: 2.7,
-                spaceBetween: 15
-            },
-            960: {
-                slidesPerView: 3,
-                spaceBetween: 15
-            }
-        }
-    });
+
+    // new Swiper('.swiper-container', {
+    //     slidesPerView: 4,
+    //     spaceBetween: 20,
+    //     breakpoints: {
+    //         0: {
+    //             slidesPerView: 2.7,
+    //             spaceBetween: 15
+    //         },
+    //         960: {
+    //             slidesPerView: 4,
+    //             spaceBetween: 15
+    //         }
+    //     }
+    // });
+
+    // new Swiper('.swiper-media', {
+    //     slidesPerView: 4,
+    //     spaceBetween: 20,
+    //     breakpoints: {
+    //         0: {
+    //             slidesPerView: 2.7,
+    //             spaceBetween: 15
+    //         },
+    //         960: {
+    //             slidesPerView: 3,
+    //             spaceBetween: 15
+    //         }
+    //     }
+    // });
 
 });
 
