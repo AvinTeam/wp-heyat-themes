@@ -9,10 +9,12 @@
 <div class="index-container">
     <div class="container-xl">
         <div class="row justify-content-center">
-            <?php 
-            get_component('home/slider'); 
-            get_component('home/cart'); ?>
-  
+            <?php
+                get_component('home/slider');
+                get_component('home/cart');
+                get_component('home/activities');
+            ?>
+
 
 
 

@@ -50,18 +50,21 @@ document.addEventListener('DOMContentLoaded', function () {
             disableOnInteraction: false,
         },
     });
-+
-new Swiper('.swiper-home-slider2-container', {
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-});
+
+    new Swiper('.swiper-home-slider2-container', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+
+
+
 
 
     // new Swiper('.swiper-container', {
@@ -104,6 +107,166 @@ jQuery(document).ready(function ($) {
     $('.onlyNumbersInput').on('input paste', function () {
         this.value = this.value.replace(/[^0-9]/g, '');
     });
+
+
+
+
+
+
+
+
+
+
+    let swiperActivities;
+
+
+
+    function initSwiper() {
+        swiperActivities = new Swiper('.swiper-activities-container', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+
+
+
+    }
+
+
+    function resetSwiper() {
+        if (swiperActivities) {
+            swiperActivities.destroy(true, true); 
+            swiperActivities = null; 
+        }
+
+        // ایجاد مجدد Swiper
+        initSwiper();
+    }
+
+    let postId = 0
+
+    function ajaxActivities() {
+
+        $('#activities-slider').addClass('d-none');
+        $('#skeleton-slider').removeClass('d-none');
+
+        const activitiesSlider = $('#activities-slider .swiper-activities-container .swiper-wrapper');
+        activitiesSlider.empty();
+
+        if (!postId) {
+            postId = $('ul.reports li.active').attr('data-postid');
+        }
+
+        const formData = {
+            action: 'heyatAjaxActivities',
+            nonce: heyat_js.nonce,
+            postId: postId,
+
+        };
+
+        $.ajax({
+            url: heyat_js.ajaxUrl,
+            method: 'POST',
+            data: formData,
+            dataType: 'json',
+            success: function (response) {
+
+                if (response.success) {
+
+                    response.data.forEach(item => {
+
+                        const label = $(`
+                                        <div class="swiper-slide">
+                                            <div class="image-container picsum-img-wrapper">
+                                                <img src="${item.image}"
+                                                    alt="${item.alt}">
+                                                <div class="carousel-caption text-start">
+                                                    <div class="row">
+                                                        <div class="col ps-0 d-flex align-items-center">
+                                                            <h4 class="slider-title rounded-pill text-white my-auto">${item.title}</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>`);
+                        activitiesSlider.append(label);
+
+                    });
+
+                    $('#activities-slider').removeClass('d-none');
+                    $('#skeleton-slider').addClass('d-none');
+
+                    resetSwiper();
+
+                }
+                else {
+                    console.error(response);
+                }
+
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr);
+                console.error("خطا در درخواست AJAX:", error);
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+    }
+
+    ajaxActivities();
+
+
+
+
+
+
+
+
+
+
+    $('ul.reports li').click(function (e) {
+        e.preventDefault();
+
+        $('ul.reports li').removeClass('active');
+        let newIdPost = $(this).attr('data-postid');
+
+        if (newIdPost != postId) {
+            postId = newIdPost
+
+            $(this).addClass('active');
+
+            ajaxActivities();
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });
 

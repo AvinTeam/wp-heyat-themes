@@ -27,9 +27,12 @@ require_once HEYAT_INCLUDES . '/styles.php';
 require_once HEYAT_INCLUDES . '/theme_filter.php';
 require_once HEYAT_INCLUDES . '/theme-function.php';
 require_once HEYAT_INCLUDES . '/jdf.php';
+require_once HEYAT_INCLUDES . '/ajax.php';
 
 
 if (is_admin()) {
     require_once HEYAT_INCLUDES . '/install.php';
+    require_once HEYAT_INCLUDES . '/meta_boxs.php';
+
 
 }

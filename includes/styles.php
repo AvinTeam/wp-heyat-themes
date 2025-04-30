@@ -141,7 +141,7 @@ function heyat_style()
         'heyat_js',
         'heyat_js',
         [
-            'ajaxurl' => admin_url('admin-ajax.php'),
+            'ajaxUrl' => admin_url('admin-ajax.php'),
             'nonce'   => wp_create_nonce('ajax-nonce'),
 
          ]
