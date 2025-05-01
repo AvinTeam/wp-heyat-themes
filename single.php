@@ -1,49 +1,58 @@
-<?php get_header(); ?>
+<?php
+    get_header();
 
-<div class="d-flex flex-row">
-    <?php get_sidebar(); ?>
-    <div class="main-content">
-        <?php get_view_part('header'); ?>
-        <div class="d-flex flex-column p-12px">
-            <div class="d-flex flex-lg-row flex-column">
-                <div class="main-content">
-                    <div class="d-lg-none d-block">
+    $image      = (has_post_thumbnail()) ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '';
+ 
+?>
 
-                        <?php get_view_part('post/shearing'); ?>
-                    </div>
-                    <?php
-                        if (has_category('notes')) {
-                            get_view_part('post/notes');
-                        } else {
-                            get_view_part('post/post');
-                        }
-                    ?>
-                </div>
-                <div class="sidebar position-relative">
-                    <?php
-                        if (has_category('notes')) {
-                            get_component('notes');
-                        } else {
-                            get_component('favorites-tab');
-                        }
-                    ?>
-                    <div class="h-24px"></div>
 
-                    <?php get_view_part('post/shearing'); ?>
-                </div>
+<div class="text-center py-5">
+    <div class=" d-flex flex-row justify-content-center align-items-center gap-3 mb-5">
+        <?php
+            $categories = get_the_category();
+            if (! empty($categories)) {
+                foreach ($categories as $category) {
+                    $category_link = esc_url(get_category_link($category->term_id));
+                    $category_name = esc_html($category->name);
+                    echo "<a class='btn btn-primary' href='{$category_link}'>{$category_name}</a>";
+                }
+            }
+        ?>
+    </div>
+    <h1 style="font-size: 34px; " class="text-white fw-900"><?php echo get_the_title(); ?></h1>
+
+</div>
+
+<div>
+    <div class="container d-flex flex-column justify-content-center align-items-center gap-5 text-white">
+
+        <div>
+            <div class="d-flex flex-column justify-content-center align-items-center my-3">
+
+                <img loading="lazy" src="<?php echo $image; ?>" alt="<?php echo get_the_title(); ?>"
+                    class="img-fluid  h-100">
             </div>
-            <div class="h-24px"></div>
-            <?php get_view_part('footer'); ?>
+            <div>
+                <?php the_content(); ?>
+            </div>
+
+
+  
+
+
+
+            <?php get_component('post/video'); ?>
+            <?php get_component('post/image'); ?>
+
+
+
+
+
+
+
         </div>
+
     </div>
 </div>
 
-
-
-
-
-<?php
-
-    get_footer();
-
-?>
+<?php get_footer();
