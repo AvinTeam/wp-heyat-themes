@@ -13,6 +13,8 @@
                 get_component('home/slider');
                 get_component('home/cart');
                 get_component('home/activities');
+                get_component('home/heart');
+
             ?>
 
 

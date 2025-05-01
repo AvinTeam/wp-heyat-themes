@@ -63,39 +63,41 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
+    new Swiper('.heart-swiper', {
+        slidesPerView: 4.5,
+        centeredSlides: true,
+        loop: true,
+        spaceBetween: 20,
+        grabCursor: true,
+        pagination: true,
+        paginationClickable: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        effect: 'coverflow',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 550,
+            depth: 5,
+            modifier: 1,
+            slideShadows: false,
+        },
+        breakpoints: {
+            1000: {
+                slidesPerView: 4.5
+            },
+            0: {
+                slidesPerView: 1
+            } 
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
 
+    });
 
-
-
-    // new Swiper('.swiper-container', {
-    //     slidesPerView: 4,
-    //     spaceBetween: 20,
-    //     breakpoints: {
-    //         0: {
-    //             slidesPerView: 2.7,
-    //             spaceBetween: 15
-    //         },
-    //         960: {
-    //             slidesPerView: 4,
-    //             spaceBetween: 15
-    //         }
-    //     }
-    // });
-
-    // new Swiper('.swiper-media', {
-    //     slidesPerView: 4,
-    //     spaceBetween: 20,
-    //     breakpoints: {
-    //         0: {
-    //             slidesPerView: 2.7,
-    //             spaceBetween: 15
-    //         },
-    //         960: {
-    //             slidesPerView: 3,
-    //             spaceBetween: 15
-    //         }
-    //     }
-    // });
 
 });
 
@@ -107,13 +109,6 @@ jQuery(document).ready(function ($) {
     $('.onlyNumbersInput').on('input paste', function () {
         this.value = this.value.replace(/[^0-9]/g, '');
     });
-
-
-
-
-
-
-
 
 
 
@@ -141,8 +136,8 @@ jQuery(document).ready(function ($) {
 
     function resetSwiper() {
         if (swiperActivities) {
-            swiperActivities.destroy(true, true); 
-            swiperActivities = null; 
+            swiperActivities.destroy(true, true);
+            swiperActivities = null;
         }
 
         // ایجاد مجدد Swiper
@@ -216,34 +211,19 @@ jQuery(document).ready(function ($) {
 
             }
         });
-
-
-
-
-
-
-
-
-
-
     }
 
-    ajaxActivities();
+    if (document.getElementById('activities-slider')) {
 
-
-
-
-
-
-
-
+        ajaxActivities();
+    }
 
 
     $('ul.reports li').click(function (e) {
         e.preventDefault();
 
         $('ul.reports li').removeClass('active');
-        let newIdPost = $(this).attr('data-postid');
+        let newIdPost = $(this).attr('data-postId');
 
         if (newIdPost != postId) {
             postId = newIdPost
@@ -257,6 +237,52 @@ jQuery(document).ready(function ($) {
 
 
 
+    $(".comment-likes").on("click", function (e) {
+
+        e.preventDefault();
+
+        let _this = this;
+
+        let postId = $(this).attr('data-postId');
+
+        startLoading();
+
+        const formData = {
+            action: 'heyatAjaxLike',
+            nonce: heyat_js.nonce,
+            postId: postId,
+
+        };
+
+        $.ajax({
+            url: heyat_js.ajaxUrl,
+            method: 'POST',
+            data: formData,
+            dataType: 'json',
+            success: function (response) {
+
+
+                if (response.success) {
+                    $(_this).html(response.data.end);
+                    console.log(response.data.post);
+                }
+                else {
+                    console.error(response);
+                }
+
+                endLoading();
+
+            },
+            error: function (xhr, status, error) {
+                console.error(xhr);
+                console.error("خطا در درخواست AJAX:", error);
+
+                endLoading();
+
+            }
+        });
+
+    });
 
 
 
