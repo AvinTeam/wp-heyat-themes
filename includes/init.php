@@ -50,3 +50,32 @@ function disable_rest_api()
     }
 }
 add_action('rest_api_init', 'disable_rest_api', 1);
+
+
+add_action('get_header','action_get_header', 10, 2 );
+
+/**
+ * Fires before the header template file is loaded.
+ *
+ * @param string|null $name Name of the specific header file to use. Null for the default header.
+ * @param array       $args Additional arguments passed to the header template.
+ */
+function action_get_header($name, $args) : void {
+
+    if(is_category()){
+        $current_category    = get_category(get_queried_object_id());
+    
+        if ($current_category->slug == "heart") {
+    
+            wp_redirect( home_url());
+                                
+        }
+    }
+}
+
+function custom_archive_posts_per_page($query) {
+    if (!is_admin() && $query->is_main_query() && (is_archive() || is_category() || is_tag())) {
+        $query->set('posts_per_page', 12);
+    }
+}
+add_action('pre_get_posts', 'custom_archive_posts_per_page');
