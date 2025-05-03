@@ -87,8 +87,8 @@
                             </a>
                         </div>
 
-                        <div class="col-sm-2 col-4"><a routerlink="/nazr"
-                                class="link text-center mx-auto text-white pt-3 pb-2" href="/nazr">
+                        <div class="col-sm-2 col-4"><a
+                                class="link text-center mx-auto text-white pt-3 pb-2" href="/pay">
                                 <div class="mx-auto svg-cont"><svg xmlns="http://www.w3.org/2000/svg" width="75"
                                         height="80" viewBox="0 0 112.12 112.12">
                                         <g id="Group_66" data-name="Group 66" transform="translate(-169.666 -1066.074)">

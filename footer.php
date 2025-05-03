@@ -17,11 +17,12 @@
                                 class="nav-item rounded-circle"><?php echo image_url('rubika.svg') ?></a>
                         </div>
                         <div class="nav-text-cont justify-content-end">
-                            <div style="width: max-content; margin-right: auto;"><span class=" px-sm-3 px-1"><a
-                                        routerlink="/media">بایگانی​</a></span><span class=" px-sm-3 px-1"><a
-                                        routerlink="/contact">ارتباط با
-                                        ما​</a></span><span class=" px-sm-3 px-1"><a routerlink="/">صفحه
+                            <div style="width: max-content; margin-right: auto;">
+                                <span class=" px-sm-3 px-1 d-none"><a href="/media">بایگانی​</a></span>
+                                <span class=" px-sm-3 px-1"><a href="/">صفحه
                                         نخست​</a></span>
+                                <span class=" px-sm-3 px-1"><a href="/contact">ارتباط با
+                                        ما​</a></span>
                             </div>
                         </div>
                     </div>
@@ -40,11 +41,10 @@
                                 class="nav-item rounded-circle"><?php echo image_url('telegram.svg') ?></a>
                         </div>
                         <div class="nav-text-cont">
-                            <div style="width: max-content;"><span class=" px-sm-3 px-1"><a routerlink="/">سامانه
-                                        خادمین‌​</a></span><span class=" px-sm-3 px-1"><a
-                                        routerlink="/auth/login">ورود​</a></span><span class=" px-sm-3 px-1"><a
-                                        routerlink="/nazr">نذر نگاه
-                                        او​</a></span></div>
+                            <div style="width: max-content;">
+                                <span class=" px-sm-3 px-1"><a href="/">سامانه خادمین‌​</a></span>
+                                <span class=" px-sm-3 px-1 d-none"><a href="/auth/login">ورود​</a></span>
+                                <span class=" px-sm-3 px-1"><a href="/pay">نذر نگاه او​</a></span></div>
                         </div>
                     </div>
                 </div>

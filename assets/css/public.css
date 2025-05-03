@@ -71,6 +71,9 @@
 
 * {
   font-family: 'IRANSans';
+  font-size: 13px;
+  font-weight: 400;
+
 }
 
 body {
@@ -78,8 +81,6 @@ body {
   background-color: #f3f3f3;
   color: #000;
   position: relative;
-  font-size: 13px;
-  font-weight: 400;
   overflow-x: hidden;
 }
 
@@ -1427,6 +1428,44 @@ app-toasts {
 .fs-9 {
   font-size: .75rem !important;
 }
+
+
+
+
+
+
+
+.contact-form {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.form-title {
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+.form-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

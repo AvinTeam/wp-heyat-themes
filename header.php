@@ -29,7 +29,7 @@
                 <div class="nav-text-cont justify-content-end mt-3">
                     <div style="width: max-content; margin-right: auto;"><span class="px-sm-3 px-1"><a routerlink="/"
                                 href="/">صفحه نخست​</a></span>
-                        <!----><span class="px-sm-3 px-1"><a routerlink="/media" href="/media">بایگانی​</a></span><span
+                        <!----><span class="px-sm-3 px-1 d-none"><a routerlink="/media" href="/media">بایگانی​</a></span><span
                             class="px-sm-3 px-1"><a routerlink="/dashboard" href="/dashboard">سامانه خادمین‌​</a></span>
                         <!---->
                     </div>
@@ -154,11 +154,12 @@
                         class="nav-item ms-md-2 rounded-circle"><?=image_url('telegram.svg')?></a>
                 </div>
                 <div class="nav-text-cont mt-3">
-                    <div style="width: max-content;"><span class="px-sm-3 px-1"><a routerlink="/auth/login"
+                    <div style="width: max-content;">
+                        <span class="px-sm-3 px-1 d-none"><a routerlink="/auth/login"
                                 href="/auth/login">ورود​</a></span>
 
-                        <span class="px-sm-3 px-1"><a routerlink="/contact" href="/contact">ارتباط با ما​</a></span>
-                        <span class="px-sm-3 px-1"><a routerlink="/nazr" href="/nazr">نذر نگاه او​</a></span>
+                        <span class="px-sm-3 px-1"><a href="/contact">ارتباط با ما​</a></span>
+                        <span class="px-sm-3 px-1"><a href="/pay">نذر نگاه او​</a></span>
                     </div>
                 </div>
             </div>
