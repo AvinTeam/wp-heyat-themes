@@ -44,7 +44,7 @@
                     <div class="mt-2"><span>بایگانی</span>
                     </div>
                 </a></div>
-            <div class="col-sm-2 col-4"><a  class="link text-center mx-auto text-white pt-3 pb-2" href="/dashboard">
+            <div class="col-sm-2 col-4"><a  class="link text-center mx-auto text-white pt-3 pb-2" href="/khadem">
                     <div class="mx-auto svg-cont"><svg
                             xmlns="http://www.w3.org/2000/svg" width="75" height="80" viewBox="0 0 112.12 112.12">
                             <g id="Group_52" data-name="Group 52"

@@ -27,10 +27,9 @@
                         class="nav-item me-md-2 rounded-circle"><?php echo image_url('rubika.svg') ?></a>
                 </div>
                 <div class="nav-text-cont justify-content-end mt-3">
-                    <div style="width: max-content; margin-right: auto;"><span class="px-sm-3 px-1"><a routerlink="/"
-                                href="/">صفحه نخست​</a></span>
-                        <!----><span class="px-sm-3 px-1 d-none"><a routerlink="/media" href="/media">بایگانی​</a></span><span
-                            class="px-sm-3 px-1"><a routerlink="/dashboard" href="/dashboard">سامانه خادمین‌​</a></span>
+                    <div style="width: max-content; margin-right: auto;"><span class="px-sm-3 px-1"><a href="/">صفحه نخست​</a></span>
+                        <!----><span class="px-sm-3 px-1 d-none"><a href="#">بایگانی​</a></span><span
+                            class="px-sm-3 px-1"><a href="/khadem">سامانه خادمین‌​</a></span>
                         <!---->
                     </div>
                 </div>

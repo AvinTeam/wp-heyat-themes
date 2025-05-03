@@ -3,15 +3,10 @@
     $gallery_images = get_post_meta($post_id, '_selected_images', true);
     $image_ids      = ! empty($gallery_images) ? explode(',', $gallery_images) : [  ];
 
-    // اگر گالری خالی بود از عکس شاخص استفاده می‌کنیم
-    if (empty($image_ids) && has_post_thumbnail($post_id)) {
-        $image_ids = [ get_post_thumbnail_id($post_id) ];
-    }
-
     if (! empty($image_ids)):
+
 ?>
 
-<?php endif; ?>
 
 <style>
 .swiper-slide {
@@ -95,3 +90,6 @@ var mySwiper = new Swiper('.swiper-post-container', {
     },
 });
 </script>
+
+
+<?php endif; ?>
