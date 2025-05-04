@@ -1,4 +1,4 @@
-<div class="row justify-content-center mx-auto">
+<div class="row justify-content-center mx-auto mt-5">
     <div class="col-12 col-md-12 mx-auto mb-4 justify-content-center">
         <h3 class="text-white">دلنوشته ها:</h3><svg xmlns="http://www.w3.org/2000/svg" width="1485.625" height="42.338"
             viewBox="0 0 1485.625 42.338" class="w-100">

@@ -197,6 +197,10 @@ input:-moz-placeholder {
 
 /* theme */
 
+.logo{
+  height: 150px;
+}
+
 .index-header {
   background-image: url('../image/aWARey.png');
   background-repeat: no-repeat;

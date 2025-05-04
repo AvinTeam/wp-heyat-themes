@@ -4,7 +4,7 @@
 
 date_default_timezone_set('Asia/Tehran');
 
-define('HEYAT_VERSION', '1.0.0');
+define('HEYAT_VERSION', '1.0.3');
 
 define('HEYAT_PATH', get_template_directory() . "/");
 define('HEYAT_INCLUDES', HEYAT_PATH . 'includes/');

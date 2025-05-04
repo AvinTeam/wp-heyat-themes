@@ -45,15 +45,16 @@
                     </div>
                 </div>
             </div>
-            <div class="search-container col-8 col-md-4 mx-auto mt-5"><input type="text" placeholder="جستجو..."
+            <div class="search-container col-8 col-md-4 mx-auto mt-5 text-dark"><input type="text" placeholder="جستجو..."
                     class="rounded-pill"></div>
             <div class="footer-title mt-4">
-                <h5 class="text-white">هیئت ثارالله زنجان</h5>
+                <h5 class="text-white"><?php echo bloginfo('name') ?></h5>
             </div>
-            <div class="row justify-content-center">
+            <div class="row justify-content-center d-none">
                 <div class="col-auto">
-                    <div class="seals my-4"><a referrerpolicy="origin" target="_blank"
-                            href="https://trustseal.enamad.ir/?id=493881&amp;Code=2cNzwoSwVSGIflmpMpaftHf1G2KAdzgK"><?php echo image_url('enamad.png') ?></a></div>
+                    <div class="seals my-4">
+                        
+                    </div>
                 </div>
             </div>
         </div>
